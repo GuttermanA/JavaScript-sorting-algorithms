@@ -11,24 +11,29 @@ class InsertionSort {
   }
 
   execute(array) {
+    let swapCounter = 0
     //start at the second element of the array, because we will be comparing each element backwards
-    for(let i = 1; i < array.length; i++) {
+    for(var i = 1; i < array.length; i++) {
       //Store the value to check against the rest of the array
       let value = array[i]
-      let insert = null
       //Start second loop at one space behind checked value
       //Continue loop as long as j > -1 and the comparison value (array[j]) is greater than the checked element (value)
-      for(let j = i - 1; j > -1 && array[j] > value; j--) {
+      for(var j = i - 1; j > -1 && array[j] > value; j--) {
+        ++swapCounter
         //While loop runs, copy current value (array[j]) to next value (array[j + 1])
         array[j + 1] = array[j]
-        insert = j + 1
+        // console.log(array)
       }
       //When loop terminates, array[j] < then value (array[i]), so we insert the value at array[j + 1] (insert)
-      array[insert] = value
+      // console.log(array)
+      array[j + 1] = value
     }
 
-    console.log(array)
-    return array
+    console.log(array, swapCounter)
+    return {
+      result: array,
+      swapCounter
+    }
   }
 
 }
