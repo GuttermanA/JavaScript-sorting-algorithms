@@ -14,19 +14,22 @@ class BubbleSort {
 
   execute (array) {
     const length = array.length;
+    let swapCount = 0
+    console.log(array)
     for (let i = 0; i < length; i++) { //Number of passes
       for (let j = 0; j < (length - i - 1); j++) { //Notice that j < (length - i)
         //Compare the adjacent positions
-        if(array[j] > array[j+1]) {
+        if(array[j] > array[j + 1]) {
           //Swap the numbers
           let tmp = array[j];  //Temporary variable to hold the current number
-          array[j] = array[j+1]; //Replace current number with adjacent number
+          array[j] = array[j + 1]; //Replace current number with adjacent number
           array[j+1] = tmp; //Replace adjacent number with current number
+          swapCount++
           console.log(array)
         }
       }
     }
-    console.log(array)
+    console.log(array, swapCount)
     return {
       result: array
     }
