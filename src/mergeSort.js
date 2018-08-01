@@ -16,16 +16,20 @@ class MergeSort {
       let result = []
       let indexLeft = 0
       let indexRight = 0
-
+      //While both indices are less that or equal to the last element in the array
       while (indexLeft < left.length && indexRight < right.length) {
+        //if the element in the current index of the right array is greater than the element in the current index of the left array
         if (left[indexLeft] < right[indexRight]) {
+          //push the left element to the result and increment the left index
           result.push(left[indexLeft])
           indexLeft++
         } else {
+          //other push the right element to the result and increment the right index
           result.push(right[indexRight])
           indexRight++
         }
       }
+      //after the loop complete, take the result array and add what remains from the right and left arrays
       return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight))
     }
 
@@ -39,8 +43,8 @@ class MergeSort {
     const right = arr.slice(middle) // items on the right side
 
     return merge(
-      mergeSort(left),
-      mergeSort(right)
+      execute(left),
+      execute(right)
     )
   }
 
