@@ -1,10 +1,15 @@
-const helpers = require('./helperFunctions')
+import { isSorted } from '../src/helperFunctions'
+
 class BinarySearch {
   constructor() {
 
   }
 
   execute(array, value) {
+
+    if(!isSorted(array)) {
+      throw new Error('Array is unsorted')
+    }
 
     let start = 0
     let end = array.length - 1
@@ -21,11 +26,17 @@ class BinarySearch {
     }
 
 
+    if(array[middle] !== value) {
+      return 'Value not found'
+    }
 
-    if()
+    return middle
   }
 
 
 
 
 }
+
+
+export default BinarySearch
