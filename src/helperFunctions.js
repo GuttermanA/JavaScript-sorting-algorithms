@@ -8,6 +8,20 @@ const swap = (array, i, j) => {
   array[j] = temp;
 }
 
+const isSorted = (array) => {
+  if(array.length === 0 || array.length === 1) {
+    return true
+  }
+
+  for(let i = 0; i < array.length; i++) {
+    if(arr[i] > arr[i + 1]) {
+      return false
+    }
+  }
+
+  return true
+}
+
 module.exports = {
   generateArray,
   swap
