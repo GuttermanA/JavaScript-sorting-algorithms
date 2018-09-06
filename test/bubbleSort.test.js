@@ -1,7 +1,6 @@
-const assert = require('assert')
-// const chai = require('chai')
-const path = require('path')
-const BubbleSort = require(path.join(__dirname, '../src', 'bubbleSort'))
+import { describe, before, it } from 'mocha';
+import assert from 'assert'
+import BubbleSort from '../src/sort/bubbleSort'
 
 describe('Bubble Sort', function () {
   describe('#execute', function () {

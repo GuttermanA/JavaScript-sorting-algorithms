@@ -1,4 +1,3 @@
-const helpers = require('./helperFunctions')
 
 class BubbleSort {
   constructor() {
@@ -36,4 +35,4 @@ class BubbleSort {
   }
 }
 
-module.exports = BubbleSort;
+export default BubbleSort;

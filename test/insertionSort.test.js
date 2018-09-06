@@ -1,7 +1,6 @@
-const assert = require('assert')
-// const chai = require('chai')
-const path = require('path')
-const InsertionSort = require(path.join(__dirname, '../src', 'insertionSort'))
+import { describe, before, it } from 'mocha';
+import assert from 'assert'
+import InsertionSort from '../src/sort/insertionSort'
 
 describe('Insertion Sort', function () {
   describe('#execute', function () {

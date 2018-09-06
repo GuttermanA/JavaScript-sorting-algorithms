@@ -49,3 +49,5 @@ class MergeSort {
   }
 
 }
+
+export default MergeSort;

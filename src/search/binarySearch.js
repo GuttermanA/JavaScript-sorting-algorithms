@@ -1,4 +1,4 @@
-import { isSorted } from '../src/helperFunctions'
+import { isSorted } from '../helperFunctions'
 
 class BinarySearch {
   constructor() {

@@ -38,4 +38,4 @@ class InsertionSort {
 
 }
 
-module.exports = InsertionSort;
+export default InsertionSort;
